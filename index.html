@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouthPath - Career Guidance for Young People</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>YouthPath</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#career" class="nav-link" data-page="career">Career Guidance</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#jobs" class="nav-link" data-page="jobs">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-page="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Empowering Youth Through Career Guidance</h1>
+                    <p>Discover your passion, explore career paths, and find opportunities that match your dreams.</p>
+                    <button class="cta-button" onclick="navigateToPage('career')">Explore Careers</button>
+                </div>
+                <div class="hero-image">
+                    <div class="placeholder-image">🎯</div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3> Career Exploration</h3>
+                    <p>Take our quiz to discover careers that match your interests and skills.</p>
+                </div>
+                <div class="feature-card">
+                    <h3> Job Opportunities</h3>
+                    <p>Browse entry-level positions and internships perfect for young professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <h3> Learning Resources</h3>
+                    <p>Access guides, tips, and resources to develop your career skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Guidance Page -->
+        <section id="career" class="page">
+            <div class="container">
+                <h1>Career Guidance</h1>
+                <p>Explore different career paths and find what's right for you.</p>
+                
+                <div class="career-quiz">
+                    <h2>Career Interest Quiz</h2>
+                    <div id="quiz-container">
+                        <div class="question active" id="question-1">
+                            <h3>What type of work environment do you prefer?</h3>
+                            <div class="quiz-options">
+                                <button class="quiz-btn" data-answer="office">Office/Indoor</button>
+                                <button class="quiz-btn" data-answer="outdoor">Outdoor/Field Work</button>
+                                <button class="quiz-btn" data-answer="remote">Remote/Flexible</button>
+                                <button class="quiz-btn" data-answer="creative">Creative Studio</button>
+                            </div>
+                        </div>
+                        <div class="question" id="question-2">
+                            <h3>Which activity sounds most appealing?</h3>
+                            <div class="quiz-options">
+                                <button class="quiz-btn" data-answer="tech">Problem-solving with technology</button>
+                                <button class="quiz-btn" data-answer="people">Working with people</button>
+                                <button class="quiz-btn" data-answer="creative">Creating something new</button>
+                                <button class="quiz-btn" data-answer="analyze">Analyzing data and trends</button>
+                            </div>
+                        </div>
+                        <div class="question" id="question-3">
+                            <h3>What motivates you most?</h3>
+                            <div class="quiz-options">
+                                <button class="quiz-btn" data-answer="impact">Making a difference</button>
+                                <button class="quiz-btn" data-answer="money">Financial success</button>
+                                <button class="quiz-btn" data-answer="recognition">Recognition and achievement</button>
+                                <button class="quiz-btn" data-answer="learning">Continuous learning</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="next-question" class="cta-button" style="display: none;">Next Question</button>
+                    <div id="quiz-result" class="quiz-result" style="display: none;">
+                        <h3>Your Career Match:</h3>
+                        <p id="result-text"></p>
+                    </div>
+                </div>
+
+                <div class="career-categories">
+                    <h2>Explore Career Categories</h2>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <h3> Technology</h3>
+                            <p>Web Development, Data Science, Cybersecurity, AI</p>
+                        </div>
+                        <div class="category-card">
+                            <h3> Creative Arts</h3>
+                            <p>Graphic Design, Photography, Writing, Marketing</p>
+                        </div>
+                        <div class="category-card">
+                            <h3> Healthcare</h3>
+                            <p>Nursing, Physical Therapy, Mental Health, Research</p>
+                        </div>
+                        <div class="category-card">
+                            <h3> Business</h3>
+                            <p>Finance, Entrepreneurship, Sales, Project Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jobs Page -->
+        <section id="jobs" class="page">
+            <div class="container">
+                <h1>Job Opportunities</h1>
+                <p>Find entry-level positions and internships perfect for young professionals.</p>
+                
+                <div class="job-filters">
+                    <select id="job-category" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="technology">Technology</option>
+                        <option value="creative">Creative</option>
+                        <option value="business">Business</option>
+                        <option value="healthcare">Healthcare</option>
+                    </select>
+                    <select id="job-type" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="internship">Internship</option>
+                        <option value="entry-level">Entry Level</option>
+                        <option value="part-time">Part Time</option>
+                    </select>
+                </div>
+
+                <div class="jobs-grid" id="jobs-container">
+                    <!-- Jobs will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="container">
+                <h1>About YouthPath</h1>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Mission</h2>
+                        <p>YouthPath is dedicated to empowering young people by providing comprehensive career guidance, job opportunities, and the resources needed to build successful careers. We believe every young person deserves access to quality career advice and opportunities to grow.</p>
+                        
+                        <h2>What We Do</h2>
+                        <ul>
+                            <li>Provide career exploration tools and assessments</li>
+                            <li>Connect youth with entry-level job opportunities</li>
+                            <li>Offer resources for skill development</li>
+                            <li>Facilitate mentorship and networking opportunities</li>
+                        </ul>
+                        
+                        <h2>Our Impact</h2>
+                        <div class="stats">
+                            <div class="stat">
+                                <h3>1000+</h3>
+                                <p>Youth Guided</p>
+                            </div>
+                            <div class="stat">
+                                <h3>500+</h3>
+                                <p>Job Placements</p>
+                            </div>
+                            <div class="stat">
+                                <h3>50+</h3>
+                                <p>Partner Companies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>Have questions or need personalized career guidance? We're here to help!</p>
+                
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" min="16" max="30">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="career-guidance">Career Guidance</option>
+                                    <option value="job-search">Job Search Help</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                        <div id="form-success" class="form-message success" style="display: none;">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                        <div id="form-error" class="form-message error" style="display: none;">
+                            Please fill in all required fields correctly.
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Other Ways to Reach Us</h2>
+                        <div class="contact-item">
+                            <h3> Email</h3>
+                            <p>hello@youthpath.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3> Phone</h3>
+                            <p>+254 700 123 456</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3> Address</h3>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3> Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YouthPath</h3>
+                    <p>Empowering youth through career guidance and opportunities.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-page="home">Home</a></li>
+                        <li><a href="#career" data-page="career">Career Guidance</a></li>
+                        <li><a href="#jobs" data-page="jobs">Jobs</a></li>
+                        <li><a href="#contact" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YouthPath. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

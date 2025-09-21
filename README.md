@@ -61,7 +61,6 @@ You can use:
 * **Vercel** (lightning-fast deployment for frontend projects)
 
 Deploy your project and confirm that:
-
 * All links and scripts work
 * It loads properly on mobile and desktop
 * It has a clear, shareable URL
