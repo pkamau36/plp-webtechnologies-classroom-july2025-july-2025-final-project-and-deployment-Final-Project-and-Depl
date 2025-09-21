@@ -1,4 +1,4 @@
-// Simple JavaScript for YouthPath Website
+
 
 // Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');

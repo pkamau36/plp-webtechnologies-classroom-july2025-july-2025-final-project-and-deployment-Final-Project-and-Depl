@@ -43,27 +43,9 @@ YouthPath is a simple, responsive website designed to help young people in Kenya
 - Modal popups for user feedback
 - Smooth scrolling between sections
 
-## Browser Compatibility
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-- Mobile browsers
-
-## For Development
-To make changes:
-1. Edit `index.html` for content and structure
-2. Modify `styles.css` for appearance and layout
-3. Update `script.js` for functionality and interactions
 
 ## Deployment
-This website can be easily deployed to:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any web hosting service
 
-Simply upload all files to your hosting provider.
 
 ## Assignment Completion
 This project fulfills the requirements for a multipage website with:
